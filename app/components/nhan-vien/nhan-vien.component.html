@@ -1,0 +1,78 @@
+<!-- <div *ngFor = "let a of nv">
+    <h3>{{a.log_thong_tin()}}</h3>
+    <h3>Lương sếp: {{nv1.log_thong_tin()}}</h3>
+    <h3>Lương nhân viên 1: {{nv2.log_thong_tin()}}</h3>
+    <h3>Lương nhân viên 2: {{nv3.log_thong_tin()}}</h3>
+    <h3>Lương nhân viên bán thời gian: {{nv4.log_thong_tin()}}</h3>
+    </div> -->
+    <!-- <div class="contai">
+
+    </div> -->
+    <form [formGroup]="myform">
+    <div class="row">
+      <div class="col-lg-3">
+          <div class="form-group">
+              <label for="exampleFormControlInput1">Tên nhân viên</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="ten">
+            </div>
+      </div>
+      <div class="col-lg-2">
+          <div class="form-group">
+              <label for="chon_loai">Loại nhân viên</label>
+              <select class="form-control" #chon_loai id="chon_loai" formControlName="loai">
+                <option value="full_time">Toàn thời gian</option>
+                <option value="part_time">Bán thời gian</option>
+              </select>
+            </div>
+      </div>
+      <div class="col-lg-2" *ngIf="chon_loai.value ? chon_loai.value == 'full_time' ? true : false : false">
+          <div class="form-group">
+              <label for="exampleFormControlSelect2">Chức vụ</label>
+              <select class="form-control" id="exampleFormControlSelect2" formControlName="chuc_vu">
+                <option value= 1>Sếp</option>
+                <option value= 2>Nhân Viên</option>
+              </select>
+            </div>
+      </div>
+      <div class="col-lg-2" *ngIf="chon_loai.value ? chon_loai.value == 'full_time' ? true : false : false">
+          <div class="form-group">
+              <label for="exampleFormControlInput2" >Ngày làm thêm</label>
+              <input type="number" class="form-control" id="exampleFormControlInput2" formControlName="ngay">
+            </div>
+      </div>
+      <div class="col-lg-2" *ngIf="chon_loai.value ? chon_loai.value == 'part_time' ? true : false : false">
+          <div class="form-group">
+              <label for="exampleFormControlInput3">Giờ làm thêm</label>
+              <input type="number" class="form-control" id="exampleFormControlInput3" formControlName="gio">
+            </div>
+      </div>
+      <div class="col-lg-1">
+          <button style="margin-top: 30px" type="submit" class="btn btn-primary mb-2" (click)="them_vao_mang()">Push</button>
+      </div>
+    </div>
+    </form>
+    <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nhân viên</th>
+                <th scope="col">Loại</th>
+                <th scope="col">Ngày làm thêm</th>
+                <th scope="col">Giờ làm thêm</th>
+                <th scope="col">Lương</th>
+                <th scope="col">Thao tác</th>
+              </tr>
+            </thead>
+            <tbody *ngFor = "let a of nv">
+              <tr>
+                <th scope="col">{{a.get_ten()}}</th>
+                <td>{{a.loai_nhan_vien()}}</td>
+                <td>{{a.get_ngay_lam_them() ? a.get_ngay_lam_them() : null}}</td>
+                <td>{{a.get_gio_lam_them() ? a.get_gio_lam_them() : null}}</td>
+                <td>{{a.get_luong()}}</td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm">Sửa</button>
+                  <button type="button" class="btn btn-secondary btn-sm">Xóa</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
