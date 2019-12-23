@@ -70,8 +70,8 @@
                 <td>{{a.get_gio_lam_them() ? a.get_gio_lam_them() : null}}</td>
                 <td>{{a.get_luong()}}</td>
                 <td>
-                  <button type="button" class="btn btn-secondary btn-sm">Sửa</button>
-                  <button type="button" class="btn btn-secondary btn-sm">Xóa</button>
+                  <button type="button" class="btn btn-secondary btn-sm" (click)="cap_nhat(a)">Sửa</button>
+                  <button type="button" class="btn btn-secondary btn-sm" (click)="xoa(a)">Xóa</button>
                 </td>
               </tr>
             </tbody>

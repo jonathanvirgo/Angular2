@@ -10,7 +10,7 @@ export class cau_hinh {
 }
 
 export abstract class Nhan_vien {
-  protected ten: String;
+  public ten: String;
   protected luong: number;
   constructor (ten: any){
       this.ten = ten;
