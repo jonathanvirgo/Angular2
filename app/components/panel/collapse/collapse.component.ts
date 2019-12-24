@@ -23,7 +23,7 @@ export class CollapseComponent implements OnInit {
   ngOnInit() {
     this._id = ++uuid;
   }
-
+  
   get collapseId() {
     return 'tp-collapse-' + this._id;
   }

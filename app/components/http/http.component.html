@@ -1,16 +1,16 @@
 <!--The whole content below can be removed with the new code.-->
 <div style="text-align:center">
     <h1>
-      Angular 4+ HttpClient Examples 
+      Angular HttpClient Demo
     </h1>
   </div>
   <h2>HttpClient Get </h2>
   <ul>
     <li>
-      <button (click)="get_products()">GET /products</button>
+       <!-- <button (click)="get_products()">GET /products</button>
       <button (click)="get_families()">GET /families</button>
       <button (click)="get_locations()">GET /locations</button>
-      <button (click)="get_transactions()">GET /transactions</button>
+      <button (click)="get_transactions()">GET /transactions</button> -->
       
       <ul>
         <li *ngFor="let product of productsObservable | async " >
@@ -49,7 +49,6 @@
           -- quantity: {{transaction.quantity}}
         </li>
       </ul> 
-      
     </li>    
   </ul>
   

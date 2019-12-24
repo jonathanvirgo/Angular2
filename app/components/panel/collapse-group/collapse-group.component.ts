@@ -19,7 +19,7 @@ export class CollapseGroupComponent implements OnInit, AfterContentInit, OnDestr
 
   ngAfterContentInit() {
     this.collapses.forEach(collapse => {
-      let subscription = collapse.selectedChange.subscribe(coll => {
+      let subscription = collapse.selectedChange.subscribe((coll: { selected: any; }) => {
         if (!this.multiple && coll.selected) {
           this.toggleCollapse(coll);
         }

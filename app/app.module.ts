@@ -7,6 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { NhanVienComponent } from './components/nhan-vien/nhan-vien.component';
 import { TemplateformComponent } from './components/template-form/template-form.component';
 import { PanelModule } from './components/panel/panel.module';
+import { HttpComponent } from './components/http/http.component';
+import { DataService } from './components/http/data.service';
+import { HttpModule } from '@angular/http';
+import {  ExampleDirective } from './components/directive/demo.directive';
+import { ChangeStrPipe } from './components/pipe/demo.pipe';
+import { ObservableComponent } from './components/observable/observable.component';
 
 @NgModule({
   imports: [
@@ -14,10 +20,11 @@ import { PanelModule } from './components/panel/panel.module';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    PanelModule
+    PanelModule,
+    HttpModule
   ],
-  declarations: [ AppComponent, NavComponent, NhanVienComponent, TemplateformComponent],
-  providers: [ ],
+  declarations: [ AppComponent, NavComponent, NhanVienComponent, TemplateformComponent, HttpComponent, ExampleDirective, ChangeStrPipe, ObservableComponent],
+  providers: [ DataService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

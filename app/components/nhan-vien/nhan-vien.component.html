@@ -47,7 +47,7 @@
             </div>
       </div>
       <div class="col-lg-1">
-          <button style="margin-top: 30px" type="submit" class="btn btn-primary mb-2" (click)="them_vao_mang()">Push</button>
+          <button style="margin-top: 30px" type="submit" class="btn btn-primary mb-2" (click)="them_vao_mang()" appDemo>Push</button>
       </div>
     </div>
     </form>
@@ -64,7 +64,7 @@
             </thead>
             <tbody *ngFor = "let a of nv">
               <tr>
-                <th scope="col">{{a.get_ten()}}</th>
+                <th scope="col">{{a.get_ten() | changeStrPipe :'Nhân viên' :'1'}}</th>
                 <td>{{a.loai_nhan_vien()}}</td>
                 <td>{{a.get_ngay_lam_them() ? a.get_ngay_lam_them() : null}}</td>
                 <td>{{a.get_gio_lam_them() ? a.get_gio_lam_them() : null}}</td>
