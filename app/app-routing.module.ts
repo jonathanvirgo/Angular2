@@ -5,6 +5,10 @@ import { TemplateformComponent } from './components/template-form/template-form.
 import { PanelComponent } from './components/panel/panel.component';
 import { HttpComponent } from './components/http/http.component';
 import { ObservableComponent } from './components/observable/observable.component';
+import { NoPageFoundComponent } from './components/no-page-found/no-page-found.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { AnimationdemoComponent } from './components/animationdemo/animationdemo.component';
 
 const routes: Routes = [
   {path: 'nhan-vien',component: NhanVienComponent},
@@ -12,7 +16,11 @@ const routes: Routes = [
   {path: 'panel', component: PanelComponent},
   {path: 'http', component: HttpComponent},
   {path: 'observable', component: ObservableComponent},
-  {path: '**', redirectTo: 'nhan-vien'}
+  {path: 'no-page-found', component: NoPageFoundComponent},
+  { path: 'products', component: ProductsComponent },
+  { path: 'product-detail/:id', component: ProductDetailComponent },
+  { path: 'animation', component: AnimationdemoComponent},
+  {path: '**', redirectTo: 'no-page-found'}
 ];
 
 @NgModule({

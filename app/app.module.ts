@@ -13,6 +13,10 @@ import { HttpModule } from '@angular/http';
 import {  ExampleDirective } from './components/directive/demo.directive';
 import { ChangeStrPipe } from './components/pipe/demo.pipe';
 import { ObservableComponent } from './components/observable/observable.component';
+import { NoPageFoundComponent } from './components/no-page-found/no-page-found.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { AnimationdemoComponent } from './components/animationdemo/animationdemo.component';
 
 @NgModule({
   imports: [
@@ -23,7 +27,8 @@ import { ObservableComponent } from './components/observable/observable.componen
     PanelModule,
     HttpModule
   ],
-  declarations: [ AppComponent, NavComponent, NhanVienComponent, TemplateformComponent, HttpComponent, ExampleDirective, ChangeStrPipe, ObservableComponent],
+  declarations: [ AppComponent, NavComponent, NhanVienComponent, TemplateformComponent, HttpComponent, NoPageFoundComponent,
+    ExampleDirective, ChangeStrPipe, ObservableComponent, ProductsComponent, ProductDetailComponent, AnimationdemoComponent],
   providers: [ DataService ],
   bootstrap: [ AppComponent ]
 })
